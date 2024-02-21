@@ -41,8 +41,7 @@ export default function App() {
 
   const loadContacts = () => {
     const savedContacts = JSON.parse(localStorage.getItem('contacts'));
-    console.log(savedContacts);
-    if (savedContacts.length > 0) {
+    if (savedContacts) {
       setContacts(savedContacts);
     }
   };
