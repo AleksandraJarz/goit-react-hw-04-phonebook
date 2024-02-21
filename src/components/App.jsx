@@ -14,7 +14,6 @@ export default function App() {
     const checkContactExist = contacts.some(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
-
     if (checkContactExist) {
       alert(`${name} is already in contacts`);
     } else {
@@ -42,6 +41,7 @@ export default function App() {
 
   const loadContacts = () => {
     const savedContacts = JSON.parse(localStorage.getItem('contacts'));
+    console.log(savedContacts);
     if (savedContacts.length > 0) {
       setContacts(savedContacts);
     }
